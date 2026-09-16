@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对象存储管理控制台</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>对象存储管理控制台</h1>
+    <p class="subtitle">存储桶 · 对象 · 版本 · 分片上传 · 生命周期 · 访问日志</p>
+  </header>
+
+  <section class="cards" id="stats"></section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>存储桶列表</h2>
+      <button id="refresh" class="btn">刷新</button>
+    </div>
+    <table id="buckets">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名称</th>
+          <th>区域</th>
+          <th>所有者</th>
+          <th>配额(字节)</th>
+          <th>状态</th>
+          <th>创建时间</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>区域容量统计</h2></div>
+    <table id="regions">
+      <thead>
+        <tr><th>区域</th><th>桶数</th><th>对象数</th><th>总容量(字节)</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <footer class="foot">objectstore · 纯 Go 标准库实现 · 零第三方依赖</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
